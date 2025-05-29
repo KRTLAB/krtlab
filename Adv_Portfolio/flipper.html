@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            transition: background-color 0.5s ease;
+            background-color: rgb(49, 5, 49);
+        }
+        button{
+            padding: 10px;
+            width: 250px;
+            border-radius: 15px;
+            border: 2px solid rgb(255, 0, 170);
+            background: white;
+            font-weight: bold;
+            font-size: 15px;
+            box-shadow: 0 0 20px rgb(255, 0, 170);
+            margin: 10px 0;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+            padding: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="con">
+    <h1 style="color: rgb(255, 0, 170);"> <span style="color: white;">My</span> color flipper</h1>
+    <button id="ChangeColor">Change color!</button>
+    <button><a href="index.html">Go back to Portfolio Page</a></button>
+    </div>
+
+    <script>
+        const colors = ['rgba(0, 255, 255, 0.745)','rgba(0, 255, 157, 0.745)','rgba(255, 149, 0, 0.745)','rgba(95, 39, 145, 0.745)','rgba(255, 0, 0, 0.411)','rgba(0, 255, 64, 0.411)','rgba(190, 187, 0, 0.721)'];
+        
+        document.getElementById('ChangeColor').onclick = () => {
+            const random = Math.floor(Math.random() * colors.length);
+            const selectedcolor = colors[random];
+            console.log(selectedcolor);
+            document.body.style.backgroundColor = selectedcolor;
+        }
+    </script>
+</body>
+</html>

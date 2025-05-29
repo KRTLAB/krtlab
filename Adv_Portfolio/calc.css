@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background: rgb(49, 5, 49);
+}
+#wrapper{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+.container{
+    width: 620px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px 5%;
+}
+.calc{
+    background: black;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 20px 2px rgb(169, 0, 90);
+    cursor: pointer;
+    width: 63%;
+    height: auto;
+}
+.calc form input{
+    border-radius: 15px;
+    border: none; 
+    outline: none;
+    width: 4.5rem;
+    height: 4.5rem;
+    font-size: 20px;
+    margin: 5px;
+    font-weight: bold;
+    background: transparent;
+    color: white;
+
+}
+.calc form input:hover{
+    box-shadow: 2px 2px 30px 2px rgb(187, 0, 115);
+    transition: 0.3s ease;
+}
+.display{
+    display: flex;
+    justify-content: flex-end;
+}
+form input.hide:hover{
+    box-shadow: none;
+}
+.display input{
+    text-align: right;
+    flex: 1;
+    font-size: 30px;
+    box-shadow: none;
+}
+form input.equal{
+    width: 160px;
+}
+button{
+    margin-left: 60px;
+    border-radius: 15px;
+    width: 8rem;
+    border: none;
+    outline: none;
+    background: black;
+    padding: 20px;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+button:hover{
+    box-shadow: 2px 2px 30px 2px white;
+    transition: 0.2s ease;
+}
