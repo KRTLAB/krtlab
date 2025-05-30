@@ -1,0 +1,597 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    background: rgb(49, 5, 49);
+    color: white;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background: rgba(49, 3, 49, 0.948);
+}
+.logo{
+    position: relative;
+    font-size: 25px;
+    text-decoration: none;
+    font-weight: 640;
+    color: white;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+.navbar a{
+    display: inline-block;
+    font-size: 17px;
+    text-decoration: none;
+    margin-left: 35px;
+    transition: 0.3s;
+    color: white;
+    opacity: 0;
+    animation: slideTop 0.5s ease forwards;
+}
+.navbar a:hover{
+    color: rgb(255, 0, 170);
+}
+.home{
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    height: 100vh;
+    background: rgb(49, 5, 49);
+    display: flex;
+    align-items: center;
+    padding: 70px 10% 0;
+    color: white;
+}
+.home-con{
+    max-width: 575px;
+}
+.home-con h1{
+    font-size: 25px;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+}
+.home-con h3{
+    font-size: 40px;
+    font-weight: bold;
+    margin: -3px 0;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+}
+.home-con p{
+    font-size: 18px;
+    font-weight: 400;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+}
+.more-btn{
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: rgb(255, 0, 170);
+    border-radius: 40px;
+    font-weight: bold;
+    font-size: 16px;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    box-shadow: 0px 0px 40px 5px rgb(255, 0, 170);
+}
+.more-btn:hover{
+    border: 2px solid white;
+    box-shadow: 0 0 50px white;
+}
+.home-img{
+    max-width: 600px;
+    width: 80%;
+    height: auto;
+    justify-content: center;
+    border-radius: 30%;
+    animation: slideRight 1s ease forwards;
+}
+@keyframes slideRight{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideTop{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideBottom{
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+/* About Section */
+
+.about{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 1.5rem;
+    padding: 5%;
+}
+.about-img img{
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    border-radius: 30%;
+    animation: slideRight 1s ease forwards;
+}
+.about-cont{
+    color: white;
+    animation: slideTop 1s ease forwards;
+}
+.about-cont .more-btn{
+    margin-top: 20px;
+}
+
+/* SERVICES */
+
+.container{
+    padding: 90px;
+}
+#services{
+    color: white;
+    font-size: 15px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+}
+.sub-title{
+    text-align: center;
+    font-size: 25px;
+    padding-bottom: 70px;
+    color: white;
+}
+.serv-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.serv-list div{
+    background: transparent;
+    padding: 40px;
+    font-size: 15px;
+    font-weight: 13px;
+    border-right: 10px;
+    border-radius: 20px;
+    transition: background 0.5s, transform 0.5s;
+    box-shadow: 1px 1px 20px rgb(147, 5, 147);
+}
+.serv-list div i{
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.serv-list div h2{
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.serv-list div a{
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    margin-top: 10px;
+    font-weight: bold;
+    display: inline-block;
+}
+.read{
+    display: inline-block;
+    padding: 8px 20px;
+    background: rgb(255, 0, 170);
+    border-radius: 20px;
+    letter-spacing: 1px;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    box-shadow: 0 0 20px rgb(255, 0, 170);
+}
+.read:hover{
+    background: rgb(255, 0, 170);
+    box-shadow: 0px 0px 30px 3px white;
+}
+.serv-list div:hover{
+    transform: translateY(-10px);
+}
+
+
+/* STATISTICAL SIDE */
+
+section{
+    display: flex;
+    flex-wrap: wrap;
+}
+.container1{
+    width: 600px;
+    height: 500px;
+    padding: 75px 90px;
+    margin-left: 120px;
+}
+.head1{
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    margin-bottom: 50px;
+}
+.bar{
+    font-size: 19px;
+}
+.tech-bars .bar{
+    margin: 40px 0;
+}
+.tech-bars .bar:first-child{
+    margin-top: 0;
+}
+.tech-bars .bar:last-child{
+    margin-bottom: 0;
+}
+.tech-bars .bar .info{
+    margin-bottom: 5px;
+}
+.tech-bars .bar .info span{
+    font-size: 18px;
+    font-weight: bold;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+.tech-bars .bar .prog-line{
+    position: relative;
+    border-radius: 20px;
+    width: 100%;
+    height: 5px;
+    background-color: #000000;
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+@keyframes animate{
+    100%{
+        transform: scaleX(1);
+    }
+}
+
+.tech-bars .bar .prog-line span{
+    height: 100%;
+    background-color: rgb(255, 0, 170);
+    position: absolute;
+    border-radius: 20px;
+    animation: animate 2s 1s cubic-bezier(1,0,0.5,1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+.prog-line.html span{
+    width: 85%;
+}
+.prog-line.css span{
+    width: 70%;
+}
+.prog-line.js span{
+    width: 50%;
+}
+.prog-line.php span{
+    width: 40%;
+}
+.prog-line span::after{
+    position: absolute;
+    padding: 1px 8px;
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    border-radius: 3px;
+    top: -28px;
+    right: -11px;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+.prog-line.html span::after{
+    content: "85%";
+}
+.prog-line.css span::after{
+    content: "70%";
+}
+.prog-line.js span::after{
+    content: "50%";
+}
+.prog-line.php span::after{
+    content: "40%";
+}
+
+.prog-line span::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-top-color: black;
+    top: -10px;
+    right: 0;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+
+@keyframes showText{
+    100%{
+        opacity: 1;
+    }
+}
+
+
+.radial-bars{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.radial-bars .radial-bar{
+    width: 50%;
+    height: 170px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.radial-bars .radial-bar svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 120px;
+    height: 150px;
+}
+.radial-bars .radial-bar svg .prog-bar{
+    stroke-width: 10;
+    stop-color: black;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+    animation: animate-bar 1s linear forwards;
+    stroke: black;
+}
+
+@keyframes animate-bar{
+    100%{
+        stroke-dashoffset: -1;
+    }
+}
+.path{
+    stroke-width: 8;
+    stroke: rgb(255, 0, 170);
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+}
+.path-1{animation: animate-path1 2s 1s linear forwards}
+.path-2{animation: animate-path2 2s 1s linear forwards}
+.path-3{animation: animate-path3 2s 1s linear forwards}
+.path-4{animation: animate-path4 2s 1s linear forwards}
+
+@keyframes animate-path1{
+    100%{
+        stroke-dashoffset: 50;;
+    }
+}
+@keyframes animate-path2{
+    100%{
+        stroke-dashoffset: 100;;
+    }
+}
+@keyframes animate-path3{
+    100%{
+        stroke-dashoffset: 150;;
+    }
+}
+@keyframes animate-path4{
+    100%{
+        stroke-dashoffset: 110;;
+    }
+}
+.radial-bar .percent{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    animation: showText 0.5s 1s linear forwards;
+}
+.radial-bar .text{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    bottom: -5px;
+    transform: translateX(-50px);
+    font-size: 17px;
+    font-weight: bold;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+/* MY EXPERIENCE */
+.exp{
+    width: 100%;
+    padding: 50px;
+    margin-top: 120px;
+    border: none;
+
+}
+.exp-cont{
+    border: none;
+    box-shadow: 1px 1px 20px rgb(255, 0, 170);
+    padding: 50px;
+    border-radius: 20px;
+    
+}
+.exp-cont h1{
+    margin-bottom: 20px;
+    text-align: center;
+}
+.exp-cont h3{
+    margin-bottom: 20px;
+}
+
+
+/* MY PROJECTS */
+
+.serv-list .proj-icon{
+    font-size: 50px;
+}
+.proj-con p{
+    font-size: 18px;
+}
+.serv-list.proj-list div{
+    box-shadow: 1px 1px 20px rgb(255, 0, 170);
+}
+.p-b{
+    background: rgb(226, 226, 226);
+    box-shadow: 1px 1px 20px rgb(147, 5, 147);
+    text-align: center;
+}
+.p-b:hover{
+    background: rgb(255, 0, 170);
+    box-shadow: 0px 0px 30px 3px black;
+}
+
+
+/* CONTACT SECTION */
+
+.cont{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    padding-left: 40px;
+    margin-top: 130px;
+}
+.cont-text  h2{
+    font-size: 50px;
+    line-height: 1;
+    text-align: center;
+}
+.cont-text  h2 span{
+    color: rgb(255, 0, 170);
+    margin-bottom: 10px;
+}
+.cont-text h4{
+    margin: 15px 0;
+    font-size: 25px;
+    font-weight: bold;
+    color: whitesmoke;
+}
+.cont-text p{
+    color: whitesmoke;
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 2rem;
+}
+.cont-list{
+    margin-bottom: 2rem
+}
+.cont-list li{
+    margin-bottom: 10px;
+    display: block;
+}
+.cont-list i{
+    display: inline-block;
+    color: rgb(255, 0, 170);
+    font-size: 15px;
+    font-weight: bold;
+    transition: all 0.4s ease;
+}
+.cont-list li a:hover{
+    transform: scale(1.01) translateY(-5px);
+    color: rgb(255, 0, 170);
+}
+.cont-form form{
+    position: relative;
+}
+.cont-form form input,form textarea{
+    border: 2px solid rgb(255, 0, 170);
+    box-shadow: 0 0 10px rgb(255, 0, 170);
+    outline: none;
+    width: 90%;
+    background: transparent;
+    color: white;
+    font-size: 1rem;
+    padding: 15px;
+    margin-bottom: 0.5rem;
+    border-radius: 1rem;
+}
+.cont-form textarea{
+    resize: none;
+    height: 220px;
+}
+.cont-form form .send{
+    display: inline-block;
+    padding: 8px 22px;
+    background: rgb(255, 0, 170);
+    border-radius: 20px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 18px;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    box-shadow: 0 0 10px rgb(255, 0, 170);
+    width: 90%;
+    border: none;
+}
+.cont-form form .send:hover{
+    background: rgb(176, 0, 117);
+    box-shadow: 0px 0px 30px 3px white;
+    border: none;
+}
+.last-text{
+    width: 100%;
+    background: rgb(20, 0, 20);
+    color: white;
+}
+.last-text p{
+    padding: 15px;
+    text-align: center;
+    margin-top: 20px;
+}
+.top{
+    position: fixed;
+    bottom: 2.1rem;
+    right: 2.1rem;
+    background: rgb(255, 0, 170);
+    font-size: 12px;
+    padding: 9px 10px;
+    border-radius: 1rem;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
